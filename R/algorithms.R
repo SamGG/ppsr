@@ -23,6 +23,7 @@ engine_glm = function(type) {
 #' available_algorithms()
 available_algorithms = function() {
   return(list(
+    'rpart' = engine_rpart,
     'tree' = engine_tree,
     'glm' = engine_glm
   ))
