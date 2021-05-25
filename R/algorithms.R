@@ -1,5 +1,6 @@
-
-
+engine_rpart = function(type) {
+  return(parsnip::set_engine(parsnip::decision_tree(tree_depth = 5, min_n = 7), "rpart"))
+}
 
 engine_tree = function(type) {
   return(parsnip::set_engine(parsnip::decision_tree(), "rpart"))
