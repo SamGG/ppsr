@@ -14,8 +14,8 @@ eval_rmse = function(y, yhat) {
 
 
 calculate_f1_scores = function(y, yhat) {
-  yhat <- factor(as.character(yhat), levels=unique(as.character(y)))
   y  <- as.factor(y)
+  yhat <- factor(as.character(yhat), levels=levels(y))
   cm = as.matrix(table(y, yhat))
 
   precision <- diag(cm) / colSums(cm)
